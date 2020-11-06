@@ -22,7 +22,8 @@
         Reset
       </v-btn>
     </div>
-    <SettingsDialog :dialog="dialog" :closeDialog="closeDialog"/>
+    <SettingsDialog :dialog="dialog" :closeDialog="closeDialog"
+                    :timers="timers" :saveSettings="saveSettings"/>
   </v-card>
 </template>
 
@@ -101,6 +102,13 @@ export default {
     },
     changeCurrentTimer(index) {
       this.resetTime(this.timers[index].minutes);
+    },
+    saveSettings(updatedTimers) {
+      this.timers = this.timers.map((timer, i) => {
+        return { ...timer, minutes: parseInt(updatedTimers[i]) }
+      })
+      this.totalSeconds = this.timers[this.currentTimer].minutes * 60;
+      this.closeDialog()
     }
   }
 }
