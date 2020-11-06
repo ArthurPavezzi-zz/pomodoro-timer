@@ -1,2 +1,2 @@
 # pomodoro-timer
-Contador da técnica Pomodoro feito com Vue.js
+Contador da técnica Pomodoro feito com Vue.js e Vuetify.
