@@ -1,6 +1,6 @@
 <template>
-  <v-card class="mt-8">
-    <v-tabs @change="changeCurrentTimer" v-model="currentTimer" grow>
+  <v-card class="mt-8 pomodoro">
+    <v-tabs @change="handleTimer" v-model="currentTimer" grow>
       <v-tab v-for="timer in timers" :key="timer.name">
         {{ timer.name }}
       </v-tab>
@@ -9,7 +9,7 @@
       <h1 class="time">{{ `${displayMinutes}:${displaySeconds}` }}</h1>
     </v-card>
     <div class="button-group">
-      <v-btn @click="startTime" color="primary">
+      <v-btn @click="startTime(timers[currentTimer].minutes)" color="primary">
         <v-icon left small>mdi-play-circle-outline</v-icon>
         Start
       </v-btn>
@@ -22,6 +22,7 @@
         Reset
       </v-btn>
     </div>
+    <audio ref="alarm" src="../../public/alarm-clock.mp3"></audio>
     <SettingsDialog :dialog="dialog" :closeDialog="closeDialog"
                     :timers="timers" :saveSettings="saveSettings"/>
   </v-card>
@@ -53,16 +54,19 @@ export default {
       currentTimer: 0,
       timers: [
         {
-          name:'Pomodoro',
-          minutes: 25
+          name: 'Pomodoro',
+          minutes: 25,
+          bgColor: '#F05B56'
         },
         {
-          name:'Short Break',
-          minutes: 5
+          name: 'Short Break',
+          minutes: 5,
+          bgColor: '#00CED1'
         },
         {
-          name:'Long Break',
-          minutes: 10
+          name: 'Long Break',
+          minutes: 10,
+          bgColor: '#20B2AA'
         },
       ]
     }
@@ -78,15 +82,26 @@ export default {
     }
   },
   methods: {
+    changeBgColor(index) {
+      this.$emit('changeBgColor', this.timers[index].bgColor)
+    },
+    handleTimer(index) {
+      this.changeBgColor(index);
+      this.changeCurrentTimer(index);
+    },
+    playAlarm() {
+      this.$refs.alarm.play();
+    },
     formatTime(time) {
       return (time < 10) ? '0' + time : time.toString();
     },
-    startTime() {
+    startTime(minutes) {
       this.stopTime();
       this.isRunning = true;
       this.timerInstance = setInterval(() => {
-        if(this.totalSeconds <= 0) {
-          this.stopTime();
+        if (this.totalSeconds <= 0) {
+          this.playAlarm();
+          this.resetTime(minutes);
           return null;
         }
         this.totalSeconds--;
@@ -105,7 +120,10 @@ export default {
     },
     saveSettings(updatedTimers) {
       this.timers = this.timers.map((timer, i) => {
-        return { ...timer, minutes: parseInt(updatedTimers[i]) }
+        return {
+          ...timer,
+          minutes: parseInt(updatedTimers[i]) > 60 ? 60 : parseInt(updatedTimers[i])
+        }
       })
       this.totalSeconds = this.timers[this.currentTimer].minutes * 60;
       this.closeDialog()
@@ -116,7 +134,7 @@ export default {
 
 <style lang="sass" scoped>
 .v-card
-  width: 450px
+  width: 100%
 
 .button-group
   padding-bottom: 20px
