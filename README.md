@@ -12,6 +12,10 @@ Depois, criamos o projeto com o vue
 ```
 vue create nome-do-projeto
 ```
+Depois instalamos o vue-router
+```
+vue add router
+```
 Então, instalamos os pacotes Vuetify e i18n
 ```
 vue add vuetify
