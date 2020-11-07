@@ -20,18 +20,21 @@
       </v-container>
     </v-main>
     <TaskList/>
+    <About/>
   </v-app>
 </template>
 
 <script>
 import Pomodoro from "@/components/Pomodoro";
 import TaskList from "@/components/TaskList";
+import About from "@/components/About";
 
 export default {
   name: 'App',
   components: {
     Pomodoro,
-    TaskList
+    TaskList,
+    About
   },
 
   data() {
