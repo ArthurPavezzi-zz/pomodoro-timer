@@ -1,12 +1,12 @@
 <template>
-  <div id="todo">
-    <v-text-field color="white" v-model="newTodo" label="New Todo"/>
-    <v-btn class="add-todo" @click="addNewTodo" text>Add New Todo</v-btn>
-    <v-btn text @click="removeAllTodos">Remove All</v-btn>
-    <v-btn text @click="markAllDone">Mark All Done</v-btn>
+  <div id="task">
+    <v-text-field color="white" v-model="newTask" label="New Task"/>
+    <v-btn class="add-task" @click="addNewTodo" text>Add New Task</v-btn>
+    <v-btn text @click="removeAllTodos" v-if="tasks.length > 0">Remove All</v-btn>
+    <v-btn text @click="markAllDone" v-if="tasks.length > 0">Mark All As Done</v-btn>
     <ul>
-      <li v-for="(todo, index) in todos" :key="todo.id" class="todo">
-        <h3 :class="{ done: todo.done }" @click="toggleDone(todo)">{{ todo.content }}</h3>
+      <li v-for="(task, index) in tasks" :key="task.id" class="task">
+        <h3 :class="{ done: task.done }" @click="toggleDone(task)">{{ task.content }}</h3>
         <v-btn class="remove" text @click="removeTodo(index)">Remove</v-btn>
       </li>
     </ul>
@@ -18,41 +18,41 @@ export default {
   name: "TaskList",
   data() {
     return {
-      newTodo: '',
-      todos: []
+      newTask: '',
+      tasks: []
     }
   },
   methods: {
     addNewTodo() {
-      this.todos.push({
+      this.tasks.push({
         id: Date.now(),
         done: false,
-        content: this.newTodo,
+        content: this.newTask,
       });
-      this.newTodo = '';
+      this.newTask = '';
     },
 
-    toggleDone(todo) {
-      todo.done = !todo.done;
+    toggleDone(task) {
+      task.done = !task.done;
     },
 
     removeTodo(index) {
-      this.todos.splice(index, 1);
+      this.tasks.splice(index, 1);
     },
 
     markAllDone() {
-      this.todos.forEach((todo) => todo.done = true);
+      this.tasks.forEach((task) => task.done = true);
     },
 
     removeAllTodos() {
-      this.todos = [];
+      this.tasks = [];
     }
   }
 }
 </script>
 
 <style lang="sass" scoped>
-#todo
+#task
   padding-top: 1em
   padding-bottom: 1em
   font-size: 2em
@@ -60,7 +60,7 @@ export default {
   margin: 0 auto
   color: whitesmoke
 
-.add-todo
+.add-task
   display: block
   width: 100%
   font-size: 1em
@@ -100,7 +100,7 @@ p
   width: 100%
   margin: 10px 0 0 0
 
-.todo
+.task
   cursor: pointer
 
 .done
