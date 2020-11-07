@@ -21,6 +21,7 @@
     </v-main>
     <TaskList/>
     <About/>
+    <Footer/>
   </v-app>
 </template>
 
@@ -28,13 +29,15 @@
 import Pomodoro from "@/components/Pomodoro";
 import TaskList from "@/components/TaskList";
 import About from "@/components/About";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'App',
   components: {
     Pomodoro,
     TaskList,
-    About
+    About,
+    Footer
   },
 
   data() {
@@ -77,4 +80,7 @@ p
   color: whitesmoke
   margin: 0
   padding: 15px 0 10px 10px
+
+Footer
+  background-color: #F05B56
 </style>
