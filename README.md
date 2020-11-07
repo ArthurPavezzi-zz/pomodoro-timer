@@ -20,3 +20,8 @@ vue add vuetify
 ```
 vue add i18n
 ```
+
+Então rodamos o servidor UI do Vue
+```
+vue ui
+```
