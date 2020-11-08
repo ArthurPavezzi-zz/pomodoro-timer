@@ -8,15 +8,15 @@ Primeiro baixamos o Vue CLI para facilitar na criação dos projetos
 ```
 npm install -g @vue/cli
 ```
-Depois, criamos o projeto com o vue
+Criamos o projeto com o vue
 ```
 vue create nome-do-projeto
 ```
-Depois instalamos o vue-router
+Instalamos o vue-router
 ```
 vue add router
 ```
-Então, instalamos os pacotes Vuetify e i18n
+Instalamos os pacotes Vuetify e i18n
 ```
 vue add vuetify
 ```
@@ -25,7 +25,18 @@ vue add vuetify
 vue add i18n
 ```
 
-Então rodamos o servidor UI do Vue
+Instalamos as dependências
+
 ```
-vue ui
+npm install @mdi-font
+npm install connect-history-api-fallback
+npm install core-js
+npm install express
+npm install express-sslify
+npm install serve-static 
+```
+
+Então rodamos o servidor
+```
+npm run serve
 ```
