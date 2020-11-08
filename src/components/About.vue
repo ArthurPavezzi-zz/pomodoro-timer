@@ -20,6 +20,7 @@
           <li><b>{{ $t('about.features.1.b') }}</b> {{ $t('about.features.1.normal') }}</li>
           <li><b>{{ $t('about.features.2.b') }}</b> {{ $t('about.features.2.normal') }}</li>
           <li><b>{{ $t('about.features.3.b') }}</b> {{ $t('about.features.3.normal') }}</li>
+          <li><b>{{ $t('about.features.4.b') }}</b> {{ $t('about.features.4.normal') }}</li>
         </ul>
       </v-col>
     </v-row>
