@@ -63,18 +63,14 @@
     "features": {
       "title": "Features",
       "1": {
-        "b": "Responsive design",
-        "normal": "that works with desktop and mobile"
-      },
-      "2": {
         "b": "Color transition",
         "normal": "to switch between work time and rest time"
       },
-      "3": {
+      "2": {
         "b": "Audio notification",
         "normal": "at the end of a timer period"
       },
-      "4": {
+      "3": {
         "b": "Customizable timer",
         "normal": "intervals to suit your preferences"
       }

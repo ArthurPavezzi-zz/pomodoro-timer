@@ -63,18 +63,14 @@
     "features": {
       "title": "Destaques",
       "1": {
-        "b": "Design responsivo",
-        "normal": "que funciona com desktop e mobile"
-      },
-      "2": {
         "b": "Transição de cores",
         "normal": "para mudar o humor entre trabalho e descanso"
       },
-      "3": {
+      "2": {
         "b": "Notificação de áudio",
         "normal": "ao final de cada contador"
       },
-      "4": {
+      "3": {
         "b": "Contador customizável",
         "normal": "para se adequar às suas preferências"
       }

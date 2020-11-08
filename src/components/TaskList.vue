@@ -1,6 +1,6 @@
 <template>
   <div id="task">
-    <v-text-field color="white" class="text--white" v-model="newTask" :label="$t('taskList.label')"/>
+    <v-text-field color="black" v-model="newTask" :label="$t('taskList.label')"/>
     <v-btn class="add-task" @click="addNewTask" text>{{ $t('taskList.newTask') }}</v-btn>
     <v-btn text @click="removeAllTasks" v-if="tasks.length > 0">{{ $t('taskList.removeAllTasks') }}</v-btn>
     <v-btn text @click="markAllDone" v-if="tasks.length > 0">{{ $t('taskList.markAllDone') }}</v-btn>
