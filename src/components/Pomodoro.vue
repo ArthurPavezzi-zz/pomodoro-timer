@@ -1,8 +1,8 @@
 <template>
   <v-card class="mt-8 pomodoro">
     <v-tabs @change="handleTimer" v-model="currentTimer" grow>
-      <v-tab v-for="timer in timers" :key="timer.name">
-        {{ timer.name }}
+      <v-tab v-for="(timer, i) in timers" :key="i">
+        {{ $t(`pomodoro.timer.${timer.name}`) }}
       </v-tab>
     </v-tabs>
     <v-card class="pa-5 d-flex flex-column justify-center align-center" flat>
@@ -11,15 +11,15 @@
     <div class="button-group">
       <v-btn @click="startTime(timers[currentTimer].minutes)" color="primary">
         <v-icon left small>mdi-play-circle-outline</v-icon>
-        Start
+        {{ $t('pomodoro.buttons.start') }}
       </v-btn>
       <v-btn @click="stopTime" color="error">
         <v-icon left small>mdi-stop-circle-outline</v-icon>
-        Stop
+        {{ $t('pomodoro.buttons.stop') }}
       </v-btn>
       <v-btn @click="resetTime(timers[currentTimer].minutes)" :disabled="isRunning">
         <v-icon left small>mdi-restart</v-icon>
-        Reset
+        {{ $t('pomodoro.buttons.reset') }}
       </v-btn>
     </div>
     <audio ref="alarm" src="../../public/alarm-clock.mp3"></audio>
@@ -54,17 +54,17 @@ export default {
       currentTimer: 0,
       timers: [
         {
-          name: 'Pomodoro',
+          name: 'pomodoro',
           minutes: 25,
           bgColor: '#F05B56'
         },
         {
-          name: 'Short Break',
+          name: 'short-break',
           minutes: 5,
           bgColor: '#00CED1'
         },
         {
-          name: 'Long Break',
+          name: 'long-break',
           minutes: 10,
           bgColor: '#20B2AA'
         },

@@ -1,3 +1,88 @@
 {
-  "message": "hello i18n !!"
+  "home": {
+    "title": "Pomodoro Timer",
+    "language": "Language"
+  },
+  "pomodoro": {
+    "timer": {
+      "pomodoro": "Pomodoro",
+      "short-break": "Short Break",
+      "long-break": "Long Break"
+    },
+    "buttons": {
+      "start": "Start",
+      "stop": "Stop",
+      "reset": "Reset"
+    }
+  },
+  "settings": {
+    "settings": "Configurações",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "taskList": {
+    "label": "New Task",
+    "newTask": "Add New Task",
+    "removeAllTasks": "Remove All",
+    "markAllDone": "Mark All As Done",
+    "remove": "Remove"
+  },
+  "about": {
+    "h2": "A responsive and customizable app to boost your productivity!",
+    "what": {
+      "h3": "What is the Pomodoro Technique?",
+      "citation": "The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late\n          1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length,\n          separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after \n          the tomato-shaped kitchen timer that Cirillo used as a university student. -",
+      "href": "https://en.wikipedia.org/wiki/Pomodoro_Technique",
+      "wiki": "Wikipedia"
+    },
+    "howTo": {
+      "h3": "How to use Pomodoro Timer?",
+      "list": {
+        "1": {
+          "b": "Add tasks",
+          "normal": "to work on today"
+        },
+        "2": {
+          "b": "Select a task",
+          "normal": "to work on"
+        },
+        "3": {
+          "b": "Start timer and focus",
+          "normal": "on the task for 25 minutes"
+        },
+        "4": {
+          "b": "Take a break",
+          "normal": "for 5 minutes when the alarm ring"
+        },
+        "5": {
+          "b": "Iterate",
+          "normal": "until you finish your tasks"
+        }
+      }
+    },
+    "features": {
+      "title": "Features",
+      "1": {
+        "b": "Responsive design",
+        "normal": "that works with desktop and mobile"
+      },
+      "2": {
+        "b": "Color transition",
+        "normal": "to switch between work time and rest time"
+      },
+      "3": {
+        "b": "Audio notification",
+        "normal": "at the end of a timer period"
+      },
+      "4": {
+        "b": "Customizable timer",
+        "normal": "intervals to suit your preferences"
+      }
+    }
+  },
+  "footer": {
+    "home": "Home",
+    "contact": "Contact",
+    "authorship": "Made with ♥ by"
+  }
 }

@@ -1,13 +1,13 @@
 <template>
   <div id="task">
-    <v-text-field color="white" v-model="newTask" label="New Task"/>
-    <v-btn class="add-task" @click="addNewTodo" text>Add New Task</v-btn>
-    <v-btn text @click="removeAllTodos" v-if="tasks.length > 0">Remove All</v-btn>
-    <v-btn text @click="markAllDone" v-if="tasks.length > 0">Mark All As Done</v-btn>
+    <v-text-field color="white" v-model="newTask" :label="$t('taskList.label')"/>
+    <v-btn class="add-task" @click="addNewTask" text>{{ $t('taskList.newTask') }}</v-btn>
+    <v-btn text @click="removeAllTasks" v-if="tasks.length > 0">{{ $t('taskList.removeAllTasks') }}</v-btn>
+    <v-btn text @click="markAllDone" v-if="tasks.length > 0">{{ $t('taskList.markAllDone') }}</v-btn>
     <ul>
       <li v-for="(task, index) in tasks" :key="task.id" class="task">
         <h3 :class="{ done: task.done }" @click="toggleDone(task)">{{ task.content }}</h3>
-        <v-btn class="remove" text @click="removeTodo(index)">Remove</v-btn>
+        <v-btn class="remove" text @click="removeTask(index)">{{ $t('taskList.remove') }}</v-btn>
       </li>
     </ul>
   </div>
@@ -23,7 +23,7 @@ export default {
     }
   },
   methods: {
-    addNewTodo() {
+    addNewTask() {
       this.tasks.push({
         id: Date.now(),
         done: false,
@@ -36,7 +36,7 @@ export default {
       task.done = !task.done;
     },
 
-    removeTodo(index) {
+    removeTask(index) {
       this.tasks.splice(index, 1);
     },
 
@@ -44,7 +44,7 @@ export default {
       this.tasks.forEach((task) => task.done = true);
     },
 
-    removeAllTodos() {
+    removeAllTasks() {
       this.tasks = [];
     }
   }
@@ -70,7 +70,6 @@ export default {
 .v-text-field
   width: 80%
   margin: 0 auto
-  color: whitesmoke
 
 li
   display: flex

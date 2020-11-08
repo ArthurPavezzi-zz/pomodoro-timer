@@ -1,0 +1,88 @@
+{
+  "home": {
+    "title": "Contador Pomodoro",
+    "language": "Idioma"
+  },
+  "pomodoro": {
+    "timer": {
+      "pomodoro": "Pomodoro",
+      "short-break": "Interlavo Curto",
+      "long-break": "Interlavo Longo"
+    },
+    "buttons": {
+      "start": "Iniciar",
+      "stop": "Parar",
+      "reset": "Reiniciar"
+    }
+  },
+  "settings": {
+    "settings": "Configurações",
+    "cancel": "Cancelar",
+    "save": "Salvar"
+  },
+  "taskList": {
+    "label": "Nova Tarefa",
+    "newTask": "Adicionar Nova Tarefa",
+    "removeAllTasks": "Remover Todas As Tarefas",
+    "markAllDone": "Marcar Todas Como Finalizadas",
+    "remove": "Remover"
+  },
+  "about": {
+    "h2": "Um app responsivo e customizável para impulsionar a sua produtividade!",
+    "what": {
+      "h3": "O que é a Técnica Pomodoro?",
+      "citation": "A Técnica Pomodoro é um método de gerenciamento de tempo desenvolvido por Francesco Cirillo no final dos anos 1980. A técnica consiste na utilização de um cronômetro para dividir o trabalho em períodos de 25 minutos, separados por breves intervalos. A técnica deriva seu nome da palavra italiana pomodoro (tomate), como referência ao popular cronômetro gastronômico na forma dessa fruta. O método é baseado na ideia de que pausas frequentes podem aumentar a agilidade mental. -",
+      "href": "https://pt.wikipedia.org/wiki/T%C3%A9cnica_pomodoro",
+      "wiki": "Wikipédia"
+    },
+    "howTo": {
+      "h3": "Como usar o Contador Pomodoro?",
+      "list": {
+        "1": {
+          "b": "Adicione tarefas",
+          "normal": "para terminar hoje"
+        },
+        "2": {
+          "b": "Selecione uma tarefa",
+          "normal": "para trabalhar"
+        },
+        "3": {
+          "b": "Inicie o contador e foque",
+          "normal": "nesta tarefa por 25 minutos"
+        },
+        "4": {
+          "b": "Descanse",
+          "normal": "por 5 minutos quando o alarme tocar"
+        },
+        "5": {
+          "b": "Repita",
+          "normal": "até terminar as suas tarefas"
+        }
+      }
+    },
+    "features": {
+      "title": "Destaques",
+      "1": {
+        "b": "Design responsivo",
+        "normal": "que funciona com desktop e mobile"
+      },
+      "2": {
+        "b": "Transição de cores",
+        "normal": "para mudar o humor entre trabalho e descanso"
+      },
+      "3": {
+        "b": "Notificação de áudio",
+        "normal": "ao final de cada contador"
+      },
+      "4": {
+        "b": "Contador customizável",
+        "normal": "para se adequar às suas preferências"
+      }
+    }
+  },
+  "footer": {
+    "home": "Principal",
+    "contact": "Contato",
+    "authorship": "Feito com ♥ por"
+  }
+}
