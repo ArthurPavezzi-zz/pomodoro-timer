@@ -7,7 +7,7 @@
     "timer": {
       "pomodoro": "Pomodoro",
       "short-break": "Intervalo Curto",
-      "long-break": "Interval o Longo"
+      "long-break": "Intervalo Longo"
     },
     "buttons": {
       "start": "Iniciar",
