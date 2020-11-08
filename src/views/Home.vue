@@ -8,8 +8,8 @@
       </div>
       <label for="language">{{ $t('home.language')}}:</label>
       <select name="language" id="language" v-model="lang" @change="handleLanguageChange($event)">
-        <option value="en" selected>English</option>
-        <option value="pt-br">Português</option>
+        <option id="en" value="en" selected>English</option>
+        <option id="pt" value="pt-br">Português</option>
       </select>
     </nav>
     <v-main>
@@ -56,6 +56,8 @@ export default {
     },
     changeBgColor(color) {
       document.getElementById('main').style.backgroundColor = color;
+      document.getElementById('en').style.backgroundColor = color;
+      document.getElementById('pt').style.backgroundColor = color;
     },
     handleLanguageChange(event) {
       this.$root.$i18n.locale = event.target.value
