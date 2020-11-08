@@ -19,7 +19,7 @@
             <Pomodoro :dialog="dialog" :closeDialog="closeDialog" @changeBgColor="changeBgColor"/>
           </v-col>
           <v-btn color="secondary" dark small top right fab @click="dialog = true">
-            <v-icon>mdi-cog-outline</v-icon>
+            <v-icon>mdi-cog</v-icon>
           </v-btn>
         </v-row>
       </v-container>
