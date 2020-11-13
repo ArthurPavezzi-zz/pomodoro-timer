@@ -2,6 +2,8 @@
 
 Contador da técnica Pomodoro feito com Vue.js e Vuetify.
 
+Veja este app funcionando [neste link](https://contador-pomodoro.herokuapp.com/#/).
+
 ## Criação do projeto
 
 Primeiro baixamos o Vue CLI para facilitar na criação dos projetos
